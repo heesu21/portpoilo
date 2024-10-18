@@ -1,3 +1,4 @@
+import CursorEffect from "src/components/CursorEffect";
 import Header from "../components/Header";
 import "./globals.css";
 import localFont from "next/font/local";
@@ -34,7 +35,6 @@ export const metadata = {
   },
 };
 
-// 각 라인 폰트를 정의
 const lineBold = localFont({
   src: "./fonts/subset-LINESeedSansKR-Bold.woff2",
   weight: "700",
@@ -63,7 +63,8 @@ export default function Layout({ children }) {
       className={`${lineRegular.className} ${lineBold.className} ${lineThin.className}`}
     >
       <body>
-        <div>
+        <CursorEffect />
+        <div className="w-full h-screen flex flex-col items-center justify-start">
           <Header />
           <div>{children}</div>
         </div>

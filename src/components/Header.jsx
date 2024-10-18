@@ -18,17 +18,26 @@ export default function Header() {
         <nav>
           <ul className="flex justify-center pl-[29px] space-x-6 text-center">
             <li>
-              <Link href={"/"} className=" font-semibold text-black">
+              <Link
+                href={"/"}
+                className=" font-semibold text-black hover-underline"
+              >
                 HOME
               </Link>
             </li>
             <li>
-              <Link href={"/about"} className=" font-semibold text-black">
+              <Link
+                href={"/about"}
+                className=" font-semibold text-black hover-underline"
+              >
                 ABOUT
               </Link>
             </li>
             <li>
-              <Link href={"/portfolio"} className="font-semibold text-black">
+              <Link
+                href={"/portfolio"}
+                className="font-semibold text-black hover-underline"
+              >
                 PORTFOLIO
               </Link>
             </li>

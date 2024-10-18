@@ -12,7 +12,6 @@ html {
   --container-max-width: 1200px;
   --container-padding: 1rem;
 
-  /* 라인 폰트 CSS 변수 추가 */
   --font-line-bold: "var(--font-line-bold)", sans-serif;
   --font-line-regular: "var(--font-line-regular)", sans-serif;
   --font-line-thin: "var(--font-line-thin)", sans-serif;
@@ -21,7 +20,7 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-line-regular), sans-serif; /* 기본적으로 Regular 사용 */
+  font-family: var(--font-line-regular), sans-serif;
   margin: 0;
   padding: 0;
   min-height: 100vh;
@@ -62,7 +61,6 @@ body {
     }
   }
 
-  /* Tailwind 유틸리티 클래스를 사용하여 폰트 스타일 정의 */
   .font-line-bold {
     font-family: var(--font-line-bold);
   }
@@ -73,5 +71,38 @@ body {
 
   .font-line-thin {
     font-family: var(--font-line-thin);
+  }
+
+  .cursor-effect {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #c9d8d4;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: transform 5s ease-out;
+  }
+
+  .hover-underline {
+    position: relative;
+  }
+
+  .hover-underline::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    bottom: -8px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    /* transition: transform 0.5s ease-out; */
+  }
+
+  .hover-underline:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
   }
 }
