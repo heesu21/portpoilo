@@ -2,17 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  font-size: 16px;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
   --container-max-width: 1200px;
   --container-padding: 1rem;
+
+  /* 라인 폰트 CSS 변수 추가 */
+  --font-line-bold: "var(--font-line-bold)", sans-serif;
+  --font-line-regular: "var(--font-line-regular)", sans-serif;
+  --font-line-thin: "var(--font-line-thin)", sans-serif;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-line-regular), sans-serif; /* 기본적으로 Regular 사용 */
   margin: 0;
   padding: 0;
   min-height: 100vh;
@@ -30,7 +39,39 @@ body {
     padding-right: var(--container-padding);
   }
 
+  @layer base {
+    * {
+      @apply border-border;
+      font-family: var(--font-pretendard);
+    }
+    body {
+      @apply bg-background text-foreground;
+    }
+    *:focus-visible {
+      outline: none;
+    }
+  }
+
   .text-balance {
     text-wrap: balance;
+  }
+
+  @keyframes draw {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  /* Tailwind 유틸리티 클래스를 사용하여 폰트 스타일 정의 */
+  .font-line-bold {
+    font-family: var(--font-line-bold);
+  }
+
+  .font-line-regular {
+    font-family: var(--font-line-regular);
+  }
+
+  .font-line-thin {
+    font-family: var(--font-line-thin);
   }
 }

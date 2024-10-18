@@ -1,9 +1,13 @@
 import React from "react";
+import Mainprofile from "../components/main/Mainprofile";
+import Maintext from "../components/main/Maintext";
 
 const MainPage = () => {
   return (
-    <div className="bg-green-100 h-screen flex items-center justify-center">
-      <div>page</div>
+    <div className="w-full h-screen flex flex-col items-center justify-start">
+      <Mainprofile />
+
+      <Maintext />
     </div>
   );
 };

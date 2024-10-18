@@ -9,7 +9,6 @@ export default function Header() {
   return (
     <header className="container-l ">
       <div className="fixed left-0 h-full w-[25%] bg-header-bg flex flex-col items-center">
-        {/* 로고 */}
         <div>
           <Link href={"/"}>
             <Image src={logo} alt="logo" width={300} height={200} />
@@ -17,7 +16,12 @@ export default function Header() {
         </div>
 
         <nav>
-          <ul className="flex justify-center space-x-6 text-center">
+          <ul className="flex justify-center pl-[29px] space-x-6 text-center">
+            <li>
+              <Link href={"/"} className=" font-semibold text-black">
+                HOME
+              </Link>
+            </li>
             <li>
               <Link href={"/about"} className=" font-semibold text-black">
                 ABOUT

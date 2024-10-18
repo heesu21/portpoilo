@@ -12,8 +12,7 @@ module.exports = {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        sans: ["Inter", "sans-serif"],
-        serif: ["Merriweather", "serif"],
+        line: ["var(--font-line)", "sans-serif"],
       },
       fontSize: {
         "2xl": "1.5rem", // 24px
@@ -22,7 +21,7 @@ module.exports = {
         "5xl": "3rem", // 48px
       },
       screens: {
-        "3xl": "1920px",
+        "2xl": "1400px",
       },
       container: {
         center: true,
@@ -42,6 +41,9 @@ module.exports = {
       },
       backgroundImage: {
         "header-bg": "url('/assets/images/background.jpg')",
+      },
+      borderColor: {
+        border: "#171717", // 'border-border' 클래스 정의
       },
     },
   },
