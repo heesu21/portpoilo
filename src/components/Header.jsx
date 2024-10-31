@@ -1,4 +1,3 @@
-// src/components/Sidebar.tsx
 import Link from "next/link";
 import Image from "next/image";
 import githubIcon from "../../public/assets/images/git_icon.png";
@@ -8,36 +7,22 @@ import logo from "../../public/assets/images/logo.png";
 export default function Header() {
   return (
     <header className="container-l ">
-      <div className="fixed left-0 h-full w-[25%] bg-header-bg flex flex-col items-center">
+      <div className="fixed left-0 h-full justify-between w-[10%] bg-header-bg flex flex-col items-center p-4">
         <div>
           <Link href={"/"}>
-            <Image src={logo} alt="logo" width={300} height={200} />
+            <Image src={logo} alt="logo" width={400} height={300} />
           </Link>
         </div>
 
         <nav>
-          <ul className="flex justify-center pl-[29px] space-x-6 text-center">
+          <ul className="text-left text-2xl font-semibold  ">
             <li>
-              <Link
-                href={"/"}
-                className=" font-semibold text-black hover-underline"
-              >
+              <Link href={"/"} className=" text-black hover-underline ">
                 HOME
               </Link>
             </li>
             <li>
-              <Link
-                href={"/about"}
-                className=" font-semibold text-black hover-underline"
-              >
-                ABOUT
-              </Link>
-            </li>
-            <li>
-              <Link
-                href={"/portfolio"}
-                className="font-semibold text-black hover-underline"
-              >
+              <Link href={"/portfolio"} className=" text-black hover-underline">
                 PORTFOLIO
               </Link>
             </li>
@@ -46,10 +31,10 @@ export default function Header() {
 
         <div className="flex justify-center relative z-10 mt-auto space-x-4 p-2">
           <Link href="mailto:heesuuuuuu@gmail.com">
-            <Image src={mailIcon} alt="Mail" width={40} height={40} />
+            <Image src={mailIcon} alt="Mail" width={30} height={30} />
           </Link>
           <Link href="https://github.com/">
-            <Image src={githubIcon} alt="GitHub" width={40} height={40} />
+            <Image src={githubIcon} alt="GitHub" width={30} height={30} />
           </Link>
         </div>
 

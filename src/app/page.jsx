@@ -1,6 +1,7 @@
 import React from "react";
 import Mainprofile from "../components/main/Mainprofile";
 import Maintext from "../components/main/Maintext";
+import About from "src/components/main/About";
 
 const MainPage = () => {
   return (
@@ -8,6 +9,8 @@ const MainPage = () => {
       <Mainprofile />
 
       <Maintext />
+
+      <About />
     </div>
   );
 };

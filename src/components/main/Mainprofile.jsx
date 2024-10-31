@@ -4,7 +4,7 @@ import profileImg from "../../../public/assets/images/profileimg.png";
 
 const Mainprofile = () => {
   return (
-    <div className="flex flex-col items-center pl-[350px] top-14 fixed">
+    <div className="flex flex-col items-center pl-[350px] top-14 relative">
       <Image
         src={profileImg}
         alt="profile image"
