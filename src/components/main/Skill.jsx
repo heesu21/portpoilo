@@ -1,22 +1,13 @@
 import React from "react";
 import Image from "next/image";
-import logo from "../../../../public/assets/images/logo.png";
 
-const Portfoliopage = () => {
+const Skill = () => {
   return (
-    <div className=" min-h-screen p-8 flex flex-col items-center ml-[400px]">
+    <div className="min-h-screen m-8 p-8 flex flex-col items-center ml-[400px] pt-[1200px]">
       {/* 프로필 섹션 */}
       <div className="flex flex-col items-center">
-        <Image
-          src={logo}
-          alt="Profile Image"
-          width={120}
-          height={120}
-          className="rounded-full"
-        />
-        <h1 className="text-3xl font-bold mt-4">윤희수</h1>
-        <p className="text-lg">1995.02.21</p>
-        <div className="flex gap-2 mt-2">
+        <h1 className="text-3xl font-bold mt-4">SKILLS</h1>
+        <div className="flex gap-2 mt-8">
           <span className="bg-gray-700 text-white px-2 py-1 rounded-md text-sm">
             Frontend-Developer
           </span>
@@ -68,6 +59,7 @@ const Portfoliopage = () => {
           </div>
         </div>
 
+        {/* 디자인, 배포 및 버전 관리 섹션 */}
         <div className="mb-4">
           <h3 className="text-xl font-semibold">
             Design, Deployment & Version Control
@@ -92,4 +84,4 @@ const Portfoliopage = () => {
   );
 };
 
-export default Portfoliopage;
+export default Skill;

@@ -2,8 +2,8 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="w-full overflow-hidden h-screen flex flex-col items-center pl-96 pt-[500px] fixed ">
-      <div className="text-center font-medium text-xl max-w-3xl px-4 mt-8">
+    <div className="w-full flex flex-col items-center pl-96 pt-[50px] relative ">
+      <div className="text-center font-medium text-xl max-w-3xl px-4">
         {/* 텍스트 내용 */}
         안녕하세요 프론트엔드 개발자 윤희수입니다.
         <br />

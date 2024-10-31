@@ -27,7 +27,7 @@ const Maintext = () => {
   }, [koreanMessage, englishMessage]);
 
   return (
-    <div className="h-screen flex pl-96 pt-[400px] fixed">
+    <div className="h-screen flex pl-96 pt-[100px] relative">
       <p className="font-bold text-4xl">{displayText}</p>
     </div>
   );

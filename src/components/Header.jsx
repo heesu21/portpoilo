@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 import githubIcon from "../../public/assets/images/git_icon.png";
@@ -5,6 +6,12 @@ import mailIcon from "../../public/assets/images/mail_icon.png";
 import logo from "../../public/assets/images/logo.png";
 
 export default function Header() {
+  const handleScroll = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
   return (
     <header className="container-l ">
       <div className="fixed left-0 h-full justify-between w-[10%] bg-header-bg flex flex-col items-center p-4">
@@ -22,9 +29,20 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link href={"/portfolio"} className=" text-black hover-underline">
-                PORTFOLIO
-              </Link>
+              <button
+                onClick={() => handleScroll("projects")}
+                className="text-black hover:underline cursor-pointer"
+              >
+                PROJECTS
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={() => handleScroll("skills")}
+                className="text-black hover:underline cursor-pointer"
+              >
+                SKILLS
+              </button>
             </li>
           </ul>
         </nav>
