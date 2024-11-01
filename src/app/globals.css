@@ -22,6 +22,7 @@ html {
 }
 
 body {
+  cursor: none;
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-line-regular), sans-serif;

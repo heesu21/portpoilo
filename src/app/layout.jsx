@@ -1,24 +1,21 @@
 import CursorEffect from "src/components/CursorEffect";
-import Header from "../components/Header";
+import Sidebar from "../components/Sidebar";
 import "./globals.css";
 import localFont from "next/font/local";
 
 export const metadata = {
   title: "Front-end developer heesu",
 
-  description:
-    "도메인 지식과 커뮤니케이션에 특별한 강점을 가진 프론트엔드 개발자입니다.",
+  description: "도메인 지식과 커뮤니케이션에 특별한 강점을 가진 프론트엔드 개발자입니다.",
 
-  keywords:
-    "Front-end, 프론트엔드, SW개발자, UX, UI, developer, react, next.js, designer, 소프트웨어",
+  keywords: "Front-end, 프론트엔드, SW개발자, UX, UI, developer, react, next.js, designer, 소프트웨어",
 
   authors: [{ name: "윤희수" }],
 
   openGraph: {
     title: "Front-end developer heesu",
 
-    description:
-      "도메인 지식과 커뮤니케이션에 특별한 강점을 가진 프론트엔드 개발자입니다.",
+    description: "도메인 지식과 커뮤니케이션에 특별한 강점을 가진 프론트엔드 개발자입니다.",
 
     url: "https://github.com/",
 
@@ -56,17 +53,18 @@ const lineThin = localFont({
   variable: "--font-line-thin",
 });
 
-export default function Layout({ children }) {
+export default function RootLayout({ children }) {
   return (
-    <html
-      lang="ko"
-      className={`${lineRegular.className} ${lineBold.className} ${lineThin.className}`}
-    >
+    <html lang="ko" className={`${lineRegular.variable} ${lineBold.variable} ${lineThin.variable}`}>
       <body>
         <CursorEffect />
-        <div className="w-full h-screen flex flex-col items-center justify-start">
-          <Header />
-          <div>{children}</div>
+        <div className="flex w-full h-screen">
+          {/* Sidebar */}
+          <Sidebar />
+          {/* Main content area */}
+          <div className="flex-1 overflow-y-auto">
+            <main className="w-full flex items-center justify-center p-4">{children}</main>
+          </div>
         </div>
       </body>
     </html>
